@@ -1,101 +1,97 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen p-8 md:p-24 bg-gradient-to-br from-teal-50 to-amber-50">
+      <div className="max-w-4xl mx-auto">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-amber-500">
+            Azra Yildirim
+          </h1>
+          <p className="text-xl text-teal-600">Software Developer</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+
+        {/* About Section */}
+        <section className="mb-16 hover:transform hover:scale-105 transition-all duration-300">
+          <h2 className="text-2xl font-bold mb-4 text-teal-600">About Me</h2>
+          <div className="bg-white p-6 rounded-xl shadow-lg border border-teal-100">
+            <p className="text-gray-700 leading-relaxed">
+              Welcome to my personal website! I'm a passionate software developer with a focus on creating elegant and efficient solutions. 
+              I enjoy working with modern technologies and am always eager to learn new things.
+            </p>
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-4 text-teal-600">Skills</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-gradient-to-br from-teal-400 to-amber-400 p-[2px] rounded-xl hover:from-teal-500 hover:to-amber-500 transition-all duration-300">
+              <div className="bg-white p-4 rounded-lg h-full">
+                <h3 className="font-semibold text-teal-600">Frontend</h3>
+                <p className="text-gray-600">React, Next.js, HTML, CSS</p>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-teal-400 to-amber-400 p-[2px] rounded-xl hover:from-teal-500 hover:to-amber-500 transition-all duration-300">
+              <div className="bg-white p-4 rounded-lg h-full">
+                <h3 className="font-semibold text-teal-600">Backend</h3>
+                <p className="text-gray-600">Node.js, Express, APIs</p>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-teal-400 to-amber-400 p-[2px] rounded-xl hover:from-teal-500 hover:to-amber-500 transition-all duration-300">
+              <div className="bg-white p-4 rounded-lg h-full">
+                <h3 className="font-semibold text-teal-600">Tools</h3>
+                <p className="text-gray-600">Git, VS Code, GitHub</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-4 text-teal-600">Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="group bg-white p-6 rounded-xl shadow-lg border border-teal-100 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-2 text-amber-600 group-hover:text-teal-600">Personal Website</h3>
+              <p className="text-gray-600">A Next.js-powered personal portfolio website showcasing my work and skills.</p>
+              <button className="mt-4 bg-gradient-to-r from-teal-400 to-amber-400 text-white px-4 py-2 rounded-lg hover:from-teal-500 hover:to-amber-500 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+            <div className="group bg-white p-6 rounded-xl shadow-lg border border-teal-100 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-2 text-amber-600 group-hover:text-teal-600">Project 2</h3>
+              <p className="text-gray-600">Coming soon...</p>
+              <button className="mt-4 bg-gradient-to-r from-teal-400 to-amber-400 text-white px-4 py-2 rounded-lg hover:from-teal-500 hover:to-amber-500 transition-all duration-300">
+                Coming Soon
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-teal-600">Contact</h2>
+          <div className="bg-white p-6 rounded-xl shadow-lg border border-teal-100">
+            <p className="text-gray-700 mb-4">
+              I'm always open to new opportunities and collaborations. Feel free to reach out!
+            </p>
+            <div className="flex flex-col space-y-2">
+              <a 
+                href="https://github.com/azrayildirim" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block bg-gradient-to-r from-teal-400 to-amber-400 text-white px-6 py-3 rounded-lg hover:from-teal-500 hover:to-amber-500 transition-all duration-300 text-center shadow-md hover:shadow-lg"
+              >
+                Visit My GitHub Profile
+              </a>
+              <button className="bg-gradient-to-r from-amber-400 to-teal-400 text-white px-6 py-3 rounded-lg hover:from-amber-500 hover:to-teal-500 transition-all duration-300 shadow-md hover:shadow-lg">
+                Contact Me
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  )
 }
